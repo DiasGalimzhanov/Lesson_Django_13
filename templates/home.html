@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class ="container">
+    {% for new in news %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ new.image.url }}" class="card-img-top" alt="{{new.pk}}">
+            <h5>{{ new.title }}</h5>
+            <h6>{{ new.author }}</h6>
+            <p>{{ new.content }}</p>
+            <p>{{ new.created_at }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
